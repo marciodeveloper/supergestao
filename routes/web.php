@@ -29,13 +29,11 @@ Route::prefix('/app')->group(function(){
     Route::get('/produtos', function(){return 'produtos';})->name('app.produtos');
 });
 
-Route::get('/rota1', function() {
-    echo 'Rota 1';
-})->name('site.rota1');
+Route::get('/teste/{p1}/{p2}', 'TesteController@teste')->name('teste');
 
-Route::get('/rota2', function() {
+/*Route::get('/rota2', function() {
     return redirect()->route('site.rota1');
-})->name('site.rota2');
+})->name('site.rota2');*/
 
 // Rote::redirect('/rota2', '/rota1');
 
